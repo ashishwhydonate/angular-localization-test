@@ -27,6 +27,7 @@ async function bundleMain() {
     bundle: true,
     format: "iife",
     write: false,
+    platform: 'node',
     absWorkingDir: workerPath,
     define: {
       global: "globalThis",
@@ -58,6 +59,7 @@ async function bundleLazyModule(filePath) {
     bundle: true,
     format: "cjs",
     write: false,
+    platform: 'node',
     absWorkingDir: workerPath,
     define: {
       global: "globalThis",
