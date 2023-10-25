@@ -11,12 +11,12 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run localize:serve-ssr",
     "serve:ssr": "node dist/localize/server/main.js",
-    "build:ssr": "ng build && ng run localize:server",
+    "build:ssr": "npm run predeploy &&  ng build && ng run localize:server",
     "prerender": "ng run localize:prerender",
     "process": "node ./tools/copy-worker-files.mjs && node ./tools/copy-client-files.mjs && node ./tools/bundle.mjs",
     "prestart": "npm run build:ssr && npm run process",
-    "predeploy": "npm run build:ssr && npm run process",
-    "deploy": "wrangler pages publish dist/cloudflare"
+    "predeploy": "npm run process",
+    "deploy": "wrangler pages deploy dist/cloudflare"
   },
   "private": true,
   "dependencies": {
