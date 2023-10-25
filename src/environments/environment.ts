@@ -1,3 +1,3 @@
 export const environment = {
-  appUrl: 'http://localhost:4200/'
+  appUrl: 'https://angular-localization-test.pages.dev/'
 };
